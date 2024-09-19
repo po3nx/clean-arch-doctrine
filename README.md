@@ -14,7 +14,7 @@ This project is a simple PHP application that uses Doctrine ORM for database int
 
     ```bash
     git clone https://github.com/po3nx/clean-arch-doctrine.git
-    cd your-repo
+    cd clean-arch-doctrine
     ```
 
 2. Install dependencies:
