@@ -13,7 +13,7 @@ This project is a simple PHP application that uses Doctrine ORM for database int
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/po3nx/clean-arch-doctrine.git
     cd your-repo
     ```
 
