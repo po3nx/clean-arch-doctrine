@@ -16,6 +16,18 @@ $router->respond('POST', '/product/create', function ($request, $response) use (
     return $response;
 });
 
+$router->respond('POST', '/product/update/[i:id]', function ($request, $response) use ($container) {
+    $controller = $container->get(App\Controller\ProductController::class);
+    $controller->updateProduct($request);
+    return $response;
+});
+
+$router->respond('DELETE', '/product/delete/[i:id]', function ($request, $response) use ($container) {
+    $controller = $container->get(App\Controller\ProductController::class);
+    $controller->deleteProduct($request);
+    return $response;
+});
+
 $router->respond('GET', '/product/[i:id]', function ($request, $response) use ($container) {
     $controller = $container->get(App\Controller\ProductController::class);
     $controller->getProduct($request->id);

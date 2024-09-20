@@ -23,6 +23,26 @@ class ProductService
         $this->productRepository->save($product);
     }
 
+    public function updateProduct(int $id, string $name, float $price, ?string $description): void
+    {
+        $product = $this->productRepository->find($id);
+        if ($product) {
+            $product->setName($name);
+            $product->setPrice($price);
+            $product->setDescription($description);
+
+            $this->productRepository->save($product);
+        }
+    }
+
+    public function deleteProduct(int $id): void
+    {
+        $product = $this->productRepository->find($id);
+        if ($product) {
+            $this->productRepository->delete($product);
+        }
+    }
+
     public function getProductById(int $id): ?Product
     {
         return $this->productRepository->find($id);
