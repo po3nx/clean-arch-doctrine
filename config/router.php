@@ -13,7 +13,7 @@ $router = new Klein();
 $router->respond('POST', '/product/create', function ($request, $response) use ($container) {
     $controller = $container->get(App\Controller\ProductController::class);
     $controller->createProduct($request);
-    return $response->json(['message' => 'Product created successfully!']);
+    return $response;
 });
 
 $router->respond('GET', '/product/[i:id]', function ($request, $response) use ($container) {
